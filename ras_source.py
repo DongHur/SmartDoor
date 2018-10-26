@@ -12,7 +12,6 @@ images = os.listdir(img_dir)
 for image in images:
 	print(image)
 	face_image = face_recognition.load_image_file(img_dir + '/' + image)
-	print(face_image)
 	face_encoding = face_recognition.face_encodings(face_image)[0]
 	# append valid faces
 	known_face_encodings.append(face_encoding)
